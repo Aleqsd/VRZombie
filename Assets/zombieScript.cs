@@ -46,8 +46,8 @@ public class zombieScript : MonoBehaviour
             agent.destination = gameObject.transform.position;
             //stop the walking animation and play the falling back animation
             anim.SetBool("isFalling", true);
-            Vector3 bloodPosition = new Vector3(gameObject.transform.position.x, 2, gameObject.transform.position.z);
-            GameObject instantiatedBlood = (GameObject)Instantiate(blood, bloodPosition, transform.rotation);
+            Vector3 bloodPosition = new Vector3(gameObject.transform.position.x, 2.8f, gameObject.transform.position.z);
+            Instantiate(blood, bloodPosition, transform.rotation);
             //destroy this zombie in six seconds.
             Destroy(gameObject, 6);
 

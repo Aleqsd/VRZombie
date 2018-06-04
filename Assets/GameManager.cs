@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
     public static int currentHealth = 100;
     public Text scoreText;
     public Text gameOver;
+    public Text scoreText2;
+    public Text gameOver2;
     private AudioSource audioSource;
     public AudioClip scream;
 
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         scoreText.text = "Score : "+score;
+        scoreText2.text = "Score : " + score;
 
         if (currentHealth == 25)
         {
@@ -31,6 +34,7 @@ public class GameManager : MonoBehaviour {
         if (currentHealth <= 0)
         {
             gameOver.enabled = true;
+            gameOver2.enabled = true;
             Time.timeScale = 0;
         }
 
